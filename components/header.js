@@ -1,30 +1,36 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Header = () => (
-  <header>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/post/[id]" as="/post/first">
-          <a>First Post</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/post/[id]" as="/post/second">
-          <a>Second Post</a>
-        </Link>
-      </li>
-    </ul>
-  </header>
-)
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <a className="navbar-brand" href="#">
+      Navbar
+    </a>
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+      {/* <ul className="navbar-nav">
+        <li className="nav-item active">
+          <Link href="/productList">
+            <a className="nav-link">Home</a>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link href="/productList">
+            <a className="nav-link">List</a>
+          </Link>
+        </li>
+      </ul> */}
+    </div>
+  </nav>
+);
 
-export default Header
+export default Header;
